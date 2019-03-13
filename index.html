@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MyPlayMp3</title>
+	<meta name="juicyads-site-verification" content="02cd795848580985fab50cf34547347c">
+	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	 <meta name="description" content="Download Free Youtube Videos And Music Download Karaoke youtube Free">
+	 <meta name="keywords" content="Download Youtube, mp3 Download, karaoke Download, Download Video youtube, Free Download Youtube"/>
+	<meta property="og:image" content="https://myplaymp3.com/myplaymp3.png" />        
+	<meta name="exoclick-site-verification" content="c36afb54418d32d38c099dbdb7c22ac7">
+	<script src="https://code.jquery.com/jquery-3.3.1.js"
+  	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  	crossorigin="anonymous"></script>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  	<script type="text/javascript" src="https://syndication.exdynsrv.com/splash.php?idzone=3258474&capping=0"></script>
+	<script type="text/javascript" src="https://ads.exdynsrv.com/ads.js"></script>
+
+</head>
+<body>
+<div class="container-fluid">
+	<div class="col-md-3">
+
+	</div>
+	<div class="col-md-5"><br>
+		<!--
+				<img src="myplaymp3.png" style="height:250px;width:300px;" class="changes">
+
+	-->
+			<script type="text/javascript">
+			var ad_idzone = "3258472",
+				 ad_width = "300",
+				 ad_height = "100";
+			</script>
+			<script type="text/javascript" src="https://ads.exdynsrv.com/ads.js"></script>
+			<noscript><iframe src="https://syndication.exdynsrv.com/ads-iframe-display.php?idzone=3258472&output=noscript&type=300x100" width="300" height="100" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe></noscript>
+		<h2>Search Music</h2>
+				<button onclick="search_g('Music Pop')">Pop</button>
+				<button onclick="search_g('Music Hip Hop')">Hip hop</button>
+				<button onclick="search_g('Music trap')">Trap</button>
+				<button onclick="search_g('Music Rock')">Rock</button>
+				<button onclick="search_g('Music Dance')">Dance</button>
+				<button onclick="search_g('Music rap')">Rap</button>
+				<button onclick="search_g('Christian Music')">Christian Music</button>
+				<button onclick="search_g('Music Electronic')">Electronic</button>
+				<button onclick="search_g('Music Soul')">Soul</button>
+				<button onclick="search_g('Music Salsa')">Salsa</button>
+				<button onclick="search_g('Music Bachata')">Bachata</button>
+				<button onclick="search_g('Music Blues')">Blues</button>
+				<button onclick="search_g('music jazz')">Jazz</button>
+				<button onclick="search_g('music Romantic')">Romantic</button><br><br>
+				<input type="text" id="search" class="form-control" value="Music class"><br>
+				<button class="btn btn-primary" onclick="search_video()">Search</button><br><br>
+	<script type="text/javascript">
+		var ad_idzone = "3258472",
+			 ad_width = "300",
+			 ad_height = "100";
+		</script>
+		<div id="videos">
+				<h2 style="text-align: center;">Search your favorite music and download</h2>		
+
+		</div>
+
+	</div>
+	<div class="col-md-3"><br>
+		<script type="text/javascript">
+		var ad_idzone = "3258476",
+			 ad_width = "300",
+			 ad_height = "250";
+		</script>
+		<script type="text/javascript" src="https://ads.exdynsrv.com/ads.js"></script>
+		<noscript><iframe src="https://syndication.exdynsrv.com/ads-iframe-display.php?idzone=3258476&output=noscript&type=300x250" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+		</noscript>
+		<script type="text/javascript">
+		var ad_idzone = "3258476",
+			 ad_width = "300",
+			 ad_height = "250";
+		</script>
+		<script type="text/javascript" src="https://ads.exdynsrv.com/ads.js"></script>
+		<noscript><iframe src="https://syndication.exdynsrv.com/ads-iframe-display.php?idzone=3258476&output=noscript&type=300x250" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0"></iframe>
+		</noscript>
+
+	</div>
+
+
+	
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	var query ="";
+
+function musica_play(id,id_youtube){
+					$(`#${id}`).html(`<iframe id="${id}" style='width:100%;' type="text/html"  height="180" src=https://www.youtube.com/embed/${id_youtube}?enablejsapi=1&origin=http://example.com&autoplay=1"  frameborder="0"></iframe>`);
+
+			}
+
+
+function download_multimedia(url_down,id,config,title=null){
+
+		$(`#loading${id}`).html(`<img src='download.gif' style="height:70px; width:70px;margin-left:65%;margin-top:-10%; position:absolute;z-index:0.9"><strong>Process video...</strong>`);	
+
+		$.ajax({
+			url:'process.php',
+			type:'post',
+			data:{
+				url:url_down,
+				action:config,
+				title_r:title
+			}
+
+		}).done((resp)=>{
+
+				
+						$(`#loading${id}`).html(`<a href='${resp}' download="${title}" ><img src='downloadarrow.png' style='height:50px; width:50px;margin-left:45%;'id="descargar" /></a><br>
+								<a href='${resp}' ><strong style='margin-left:25%;'>Click here to download</strong></a>
+							`);	
+
+						//download="${title}"
+
+
+						$('#descargar').trigger('click');
+
+		});
+
+
+}
+
+function search_video(){		 
+		query = $('#search').val();
+
+					$.ajax({
+						url:`https://www.googleapis.com/youtube/v3/search?key=AIzaSyAmqlZKdPA0i7KA8uSrGequLt4jwq6IeWA&part=snippet,id&order=viewCount&maxResults=30&q=${query}&type=video`,
+							type:'get'
+
+
+						}).done(function(resp){
+								//console.log(resp);
+								var videos = resp.items.length;
+								var adaptador ="";
+								console.log(resp);
+								var url;
+								var id_youtube;
+								var url_ready;
+								var img_view;
+								for(i=0;i<videos;i++){
+
+
+									console.log(resp.items[i].id.videoId);
+
+									id_youtube =resp.items[i].id.videoId;
+
+
+									img_view= resp.items[i].snippet.thumbnails.medium.url;
+									url_ready =`https://www.youtube.com/watch?v=${id_youtube}`;
+									titulo =resp.items[i].snippet.title;
+									titulo = titulo.replace('"','_');
+									titulo = titulo.replace(' ','_');
+									titulo = titulo.replace('"','_');
+
+
+									adaptador+=`<div class='panel panel-default' >
+										<div id='${i}'>
+											<img src='${img_view}' style="height:180px; width:100%" /><br><br>
+											<button class='btn btn-primary' style='margin-left:40%;' onclick="musica_play(${i},'${id_youtube}')">Play</button>
+										</div>
+											<div class='panel-body' style='height:140px;'>
+												<strong style='font-size:14px;'>${titulo}</strong><br>
+							<button class='btn btn-success' style='float:rigth' onclick='download_multimedia("${url_ready}",${i},"video_download","${titulo}")'>Download Video</button>
+										<button class='btn btn btn-success' onclick='download_multimedia("${url_ready}",${i},"mp3_download","${titulo}")'>Download Music</button>
+												<div id="loading${i}"></div>
+											</div>
+									</div>
+									`;
+									
+									
+
+
+
+								}
+
+								$('#videos').html(adaptador);
+
+
+
+						});
+}
+
+
+function search_g(param){
+
+					$.ajax({
+						url:`https://www.googleapis.com/youtube/v3/search?key=AIzaSyAmqlZKdPA0i7KA8uSrGequLt4jwq6IeWA&part=snippet,id&order=viewCount&maxResults=30&q=${param}&type=video`,
+							type:'get'
+
+
+						}).done(function(resp){
+								//console.log(resp);
+								var videos = resp.items.length;
+								var adaptador ="";
+								console.log(resp);
+								var url;
+								var id_youtube;
+								var url_ready;
+								var img_view;
+								for(i=0;i<videos;i++){
+
+
+									console.log(resp.items[i].id.videoId);
+
+									id_youtube =resp.items[i].id.videoId;
+
+
+									img_view= resp.items[i].snippet.thumbnails.medium.url;
+									url_ready =`https://www.youtube.com/watch?v=${id_youtube}`;
+									titulo =resp.items[i].snippet.title;
+									titulo = titulo.replace('"','_');
+									titulo = titulo.replace(' ','_');
+									titulo = titulo.replace('"','_');
+
+									adaptador+=`<div class='panel panel-default' >
+										<div id='${i}'>
+											<img src='${img_view}' style="height:180px; width:100%" /><br><br>
+											<button class='btn btn-primary' style='margin-left:40%;' onclick="musica_play(${i},'${id_youtube}')">Play</button>
+										</div>
+											<div class='panel-body' style='height:140px;'>
+												<strong style='font-size:14px;'>${titulo}</strong><br>
+							<button class='btn btn-success' style='float:rigth' onclick='download_multimedia("${url_ready}",${i},"video_download","${titulo}")'>Download Video</button>
+										<button class='btn btn btn-success' onclick='download_multimedia("${url_ready}",${i},"mp3_download","${titulo}")'>Download Music</button>
+												<div id="loading${i}"></div>
+											</div>
+									</div>
+									`;
+									
+									
+
+
+
+								}
+
+								$('#videos').html(adaptador);
+
+
+
+						});
+
+
+}
+
+
+	$('document').ready(function(){
+			
+		search_video();
+
+			$('#search').keypress((e)=>{
+
+					if(e.which==13){
+
+							search_video();
+
+					}
+
+
+			});
+
+
+	});
+
+</script>
+
+
+
+</body>
+</html>
+<style type="text/css">
+.changes{
+
+
+
+}
+
+
+@media(min-width: 600px){
+
+		.changes{
+			margin-left:15%;
+
+		}
+
+
+}
+
+
+</style>
